@@ -27,6 +27,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <title>AAZify | Digital Products That Define Tomorrow</title>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
