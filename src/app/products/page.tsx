@@ -43,12 +43,12 @@ const PRODUCTS = [
         ],
         summary:
             "A comprehensive solution to streamline retail operations and maximize efficiency.",
-        demo: "https://pos.aazify.com",
+        demo: "https://pos.aazify.com/home",
     },
     {
         emoji: "💵",
-        name: "Aazify Commission Shop",
-        desc: "Complete solution for commission-based shops to manage products, sales, and commissions.",
+        name: "Aazify Aarti / Mandi / Commission Shop",
+        desc: "Complete solution for Aarti, Mandi, and commission-based shops to manage products, sales, and commissions.",
         features: [
             "Product & Inventory Management",
             "Commission Calculation for Vendors",
@@ -61,8 +61,8 @@ const PRODUCTS = [
             "FBR Tax Integration",
         ],
         summary:
-            "The perfect system for commission-based shops to automate operations and boost transparency.",
-        demo: "https://commission.aazify.com",
+            "The perfect system for Aarti, Mandi, and commission-based shops to automate operations and boost transparency.",
+        demo: "https://www.aarti.aazify.com",
     },
     {
         emoji: "🍽️",
@@ -81,6 +81,25 @@ const PRODUCTS = [
         summary:
             "A full-featured solution to streamline restaurant operations and enhance customer satisfaction.",
         demo: "https://restaurant.aazify.com",
+    },
+    {
+        emoji: "🧾",
+        name: "Aazify FBR Digital Invoicing",
+        desc: "FBR-compliant digital invoicing software to automate tax invoices and simplify business compliance.",
+        features: [
+            "FBR Compliant Digital Invoicing",
+            "Automated Invoice Generation",
+            "Real-time Sales Tax Calculation",
+            "GST & Income Tax Management",
+            "IRIS & POS System Integration",
+            "Invoice History & Record Keeping",
+            "Multi-Business & Branch Support",
+            "PDF & Print Invoice Export",
+            "Automated Tax Reporting & Summaries",
+        ],
+        summary:
+            "A powerful FBR-integrated invoicing solution to keep your business tax-compliant and invoice management effortless.",
+        demo: "https://tax.aazify.com",
     },
 ];
 

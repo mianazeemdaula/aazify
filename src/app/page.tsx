@@ -2,9 +2,10 @@ import Link from "next/link";
 
 const PRODUCTS = [
     { emoji: "📦", name: "Aazify Cold Store", tagline: "Smart Cold Storage Management", desc: "Manage inventory, farmers, rooms, and payments all in one platform.", demo: "https://coldstore.aazify.com" },
-    { emoji: "🛒", name: "Aazify Point of Sale", tagline: "Modern Retail & Trading POS", desc: "Streamline sales, inventory, and customer management efficiently.", demo: "https://pos.aazify.com" },
-    { emoji: "💵", name: "Aazify Commission Shop", tagline: "Automated Multi-Vendor Shop System", desc: "Track vendors, commissions, and stock in real time.", demo: "https://commission.aazify.com" },
+    { emoji: "🛒", name: "Aazify Point of Sale", tagline: "Modern Retail & Trading POS", desc: "Streamline sales, inventory, and customer management efficiently.", demo: "https://pos.aazify.com/home" },
+    { emoji: "💵", name: "Aazify Aarti / Mandi / Commission Shop", tagline: "Automated Aarti, Mandi & Commission System", desc: "Track vendors, commissions, and stock in real time for Aarti, Mandi, and commission-based shops.", demo: "https://www.aarti.aazify.com" },
     { emoji: "🍽️", name: "Aazify Restaurant Management", tagline: "End-to-End Restaurant Operations", desc: "Manage tables, orders, inventory, and staff seamlessly.", demo: "https://restaurant.aazify.com" },
+    { emoji: "🧾", name: "Aazify FBR Digital Invoicing", tagline: "FBR-Compliant Tax Invoicing Software", desc: "Automate digital invoices, tax calculations, and FBR compliance effortlessly.", demo: "https://tax.aazify.com" },
 ];
 
 const SERVICES = [
