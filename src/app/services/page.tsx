@@ -81,52 +81,60 @@ export default function ServicesPage() {
                     development with precision and creativity.
                 </p>
             </div>
+            <section className="services-grid-container">
+                <div className="services-cards-grid">
+                    {SERVICES.map((service, idx) => {
+                        const serviceKey = service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+                        const cardVariants = ["light", "theme-green"];
+                        const variant = cardVariants[idx % cardVariants.length];
+                        return (
+                            <div className={`service-detail-card variant-${variant}`} key={service.title} id={`service-${serviceKey}`}>
+                                <div className="service-card-badge-wrapper">
+                                    <div className="service-card-emoji-box">
+                                        {service.icon}
+                                    </div>
+                                    <div className="service-card-title-area">
+                                        <h3>{service.title}</h3>
+                                    </div>
+                                </div>
 
-            {SERVICES.map((service, idx) => (
-                <section key={service.title}>
-                    {idx > 0 && <div className="grad-line" style={{ margin: "0 0 100px 0" }} />}
-                    <div className="about-grid">
-                        <div>
-                            <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{service.icon}</div>
-                            <h2 className="section-title" style={{ maxWidth: "100%" }}>
-                                {service.title}
-                            </h2>
-                            <p
-                                style={{
-                                    color: "var(--primary-light)",
-                                    fontSize: "1.05rem",
-                                    fontWeight: 500,
-                                    marginBottom: "1rem",
-                                }}
-                            >
-                                {service.tagline}
-                            </p>
-                            <p style={{ color: "var(--muted)", lineHeight: 1.8, marginBottom: "1.5rem", fontSize: "0.95rem" }}>
-                                {service.desc}
-                            </p>
-                            <div className="service-card" style={{ border: "none", padding: "1.5rem", borderRadius: "16px" }}>
-                                <h4 style={{ fontFamily: "var(--font-head)", fontSize: "0.9rem", fontWeight: 700, marginBottom: "0.8rem" }}>
-                                    ✨ Key Highlights
-                                </h4>
-                                <ul className="highlights">
-                                    {service.highlights.map((h) => (
-                                        <li key={h}>{h}</li>
+                                <ul className="service-card-simple-list">
+                                    {service.highlights.map((h, hIdx) => (
+                                        <li key={h} id={`highlight-${serviceKey}-${hIdx}`}>
+                                            <span className="tick">✓</span>
+                                            <span className="text">{h}</span>
+                                        </li>
                                     ))}
                                 </ul>
-                                <div className="outcome">
-                                    <p>📌 {service.outcome}</p>
+
+                                <div className="service-card-action-area">
+                                    <Link
+                                        href="/contact"
+                                        className="service-card-btn-cta"
+                                        id={`btn-cta-${serviceKey}`}
+                                    >
+                                        {service.cta}
+                                        <svg
+                                            style={{ width: "16px", height: "16px" }}
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2.5"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                            />
+                                        </svg>
+                                    </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="about-visual">
-                            <div className="about-visual-inner" />
-                            <div className="about-visual-text" style={{ fontSize: "4rem" }}>
-                                {service.icon}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            ))}
+                        );
+                    })}
+                </div>
+            </section>
 
             {/* CTA */}
             <section className="cta-section">

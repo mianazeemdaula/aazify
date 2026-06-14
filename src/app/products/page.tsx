@@ -3,13 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Products",
     description:
-        "Explore Aazify's powerful, ready-to-use digital products — Cold Store, POS, Commission Shop & Restaurant Management systems.",
+        "Explore Aazify's powerful, ready-to-use digital products — Cold Store, POS, Mandi Management & Restaurant Management systems.",
 };
 
 const PRODUCTS = [
     {
         emoji: "📦",
         name: "Aazify Cold Store",
+        tagline: "Cold Storage Management",
         desc: "Smart software to manage your cold storage operations with ease and accuracy.",
         features: [
             "Complete Farmers Record Management",
@@ -29,6 +30,7 @@ const PRODUCTS = [
     {
         emoji: "🛒",
         name: "Aazify Point of Sale (POS)",
+        tagline: "Retail & Trading POS",
         desc: "Modern POS system for retailers and traders to streamline sales and inventory.",
         features: [
             "Complete Sales & Purchase Management",
@@ -47,8 +49,9 @@ const PRODUCTS = [
     },
     {
         emoji: "💵",
-        name: "Aazify Aarti / Mandi / Commission Shop",
-        desc: "Complete solution for Aarti, Mandi, and commission-based shops to manage products, sales, and commissions.",
+        name: "Aazify Mandi Management",
+        tagline: "Mandi & Commission Shop",
+        desc: "Complete solution for Mandi and commission-based shops to manage products, sales, and commissions.",
         features: [
             "Product & Inventory Management",
             "Commission Calculation for Vendors",
@@ -61,12 +64,13 @@ const PRODUCTS = [
             "FBR Tax Integration",
         ],
         summary:
-            "The perfect system for Aarti, Mandi, and commission-based shops to automate operations and boost transparency.",
-        demo: "https://www.aarti.aazify.com",
+            "The perfect system for Mandi and commission-based shops to automate operations and boost transparency.",
+        demo: "https://mandi.aazify.com",
     },
     {
         emoji: "🍽️",
         name: "Aazify Restaurant Management",
+        tagline: "Restaurant Operations",
         desc: "End-to-end software for restaurants to handle orders, tables, and kitchen workflows efficiently.",
         features: [
             "Table & Order Management",
@@ -85,6 +89,7 @@ const PRODUCTS = [
     {
         emoji: "🧾",
         name: "Aazify FBR Digital Invoicing",
+        tagline: "Tax & FBR Compliance",
         desc: "FBR-compliant digital invoicing software to automate tax invoices and simplify business compliance.",
         features: [
             "FBR Compliant Digital Invoicing",
@@ -121,53 +126,89 @@ export default function ProductsPage() {
                 </p>
             </div>
 
-            {PRODUCTS.map((product, idx) => (
-                <section key={product.name}>
-                    {idx > 0 && <div className="grad-line" style={{ margin: "0 0 100px 0" }} />}
-                    <div className="about-grid" style={{ gap: "3rem" }}>
-                        <div>
-                            <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{product.emoji}</div>
-                            <h2 className="section-title" style={{ maxWidth: "100%" }}>
-                                {product.name}
-                            </h2>
-                            <p style={{ color: "var(--muted)", lineHeight: 1.8, marginBottom: "1.5rem", fontSize: "1rem" }}>
-                                {product.desc}
-                            </p>
-                            <p style={{ color: "var(--muted)", lineHeight: 1.8, marginBottom: "2rem", fontSize: "0.95rem" }}>
-                                📊 {product.summary}
-                            </p>
-                            <a
-                                href={product.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn-primary"
-                            >
-                                Try Live Demo →
-                            </a>
-                        </div>
-                        <div>
-                            <h3
-                                style={{
-                                    fontFamily: "var(--font-head)",
-                                    fontSize: "1.1rem",
-                                    fontWeight: 700,
-                                    marginBottom: "1.2rem",
-                                }}
-                            >
-                                Key Features
-                            </h3>
-                            <div className="feature-grid" style={{ gridTemplateColumns: "1fr" }}>
-                                {product.features.map((f) => (
-                                    <div className="feature-item" key={f}>
-                                        <span className="icon">✓</span>
-                                        <span>{f}</span>
+            <section className="products-grid-container">
+                <div className="products-cards-grid">
+                    {PRODUCTS.map((product, idx) => {
+                        const productKey = product.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+                        const cardVariants = ["light", "theme-green"];
+                        const variant = cardVariants[idx % cardVariants.length];
+                        return (
+                            <div className={`product-detail-card variant-${variant}`} key={product.name} id={`product-${productKey}`}>
+                                <div className="product-card-badge-wrapper">
+                                    <div className="product-card-emoji-box">
+                                        {product.emoji}
                                     </div>
-                                ))}
+                                    <div className="product-card-title-area">
+                                        <h3>{product.name}</h3>
+                                        <span className="product-card-tagline">{product.tagline}</span>
+                                    </div>
+                                </div>
+
+                                <p className="product-card-description">
+                                    {product.desc}
+                                </p>
+
+                                <div className="product-card-features-section">
+                                    <h4 className="product-card-features-heading">Key Features</h4>
+                                    <div className="product-card-features-list">
+                                        {product.features.map((f, fIdx) => (
+                                            <div 
+                                                className="product-card-feature-pill" 
+                                                key={f}
+                                                id={`feature-${productKey}-${fIdx}`}
+                                            >
+                                                <div className="product-card-feature-icon-wrapper">
+                                                    <svg
+                                                        style={{ width: "10px", height: "10px" }}
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        strokeWidth="3.5"
+                                                        viewBox="0 0 24 24"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            d="M4.5 12.75l6 6 9-13.5"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <span className="product-card-feature-text">{f}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="product-card-action-area">
+                                    <a
+                                        href={product.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="product-card-btn-demo"
+                                        id={`btn-demo-${productKey}`}
+                                    >
+                                        Try Live Demo
+                                        <svg
+                                            style={{ width: "16px", height: "16px" }}
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2.5"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-            ))}
+                        );
+                    })}
+                </div>
+            </section>
 
             {/* CTA */}
             <section className="cta-section">
@@ -177,10 +218,10 @@ export default function ProductsPage() {
                 </h2>
                 <p>Let&apos;s discuss how we can build the perfect solution for you.</p>
                 <div className="cta-actions">
-                    <a href="mailto:contact@aazify.com" className="btn-primary">
+                    <a href="mailto:contact@aazify.com" className="btn-primary" id="cta-email-link">
                         📩 contact@aazify.com
                     </a>
-                    <a href="https://wa.me/923007395147" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                    <a href="https://wa.me/923007395147" target="_blank" rel="noopener noreferrer" className="btn-secondary" id="cta-whatsapp-link">
                         📱 WhatsApp Us
                     </a>
                 </div>

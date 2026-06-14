@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const TEAM_MEMBERS = [
     { emoji: "👨‍💼", name: "Mr. Muhammad Abbas", role: "CEO & Founder", desc: "Visionary leader driving Aazify's mission to empower businesses with smart digital solutions." },
     { emoji: "👨‍💻", name: "Mr. Azeem Ullah", role: "CTO", desc: "Technology expert leading the development of scalable, future-ready software architectures." },
-    { emoji: "🤝", name: "Mr. Zeshan Ashraf", role: "Head of Sales", desc: "Driving business growth through strategic partnerships and client relationships." },
+    { emoji: "🤝", name: "Mr. Zeshan Talib", role: "Head of Sales", desc: "Driving business growth through strategic partnerships and client relationships." },
 ];
 
 const DEPARTMENTS = [

@@ -1,33 +1,56 @@
 import Link from "next/link";
 
+
 const PRODUCTS = [
-    { emoji: "📦", name: "Aazify Cold Store", tagline: "Smart Cold Storage Management", desc: "Manage inventory, farmers, rooms, and payments all in one platform.", demo: "https://coldstore.aazify.com" },
-    { emoji: "🛒", name: "Aazify Point of Sale", tagline: "Modern Retail & Trading POS", desc: "Streamline sales, inventory, and customer management efficiently.", demo: "https://pos.aazify.com/home" },
-    { emoji: "💵", name: "Aazify Aarti / Mandi / Commission Shop", tagline: "Automated Aarti, Mandi & Commission System", desc: "Track vendors, commissions, and stock in real time for Aarti, Mandi, and commission-based shops.", demo: "https://www.aarti.aazify.com" },
+    { emoji: "📦", name: "Aazify Cold Store Management", tagline: "Smart Cold Storage Management", desc: "Manage inventory, farmers, rooms, and payments all in one platform.", demo: "https://coldstore.aazify.com" },
+    { emoji: "🛒", name: "Aazify Point of Sale Management", tagline: "Modern Retail & Trading POS", desc: "Streamline sales, inventory, and customer management efficiently.", demo: "https://pos.aazify.com/home" },
+    { emoji: "💵", name: "Aazify Mandi Management", tagline: "Automated Mandi & Commission System", desc: "Track vendors, commissions, and stock in real time for Mandi and commission-based shops.", demo: "https://mandi.aazify.com" },
     { emoji: "🍽️", name: "Aazify Restaurant Management", tagline: "End-to-End Restaurant Operations", desc: "Manage tables, orders, inventory, and staff seamlessly.", demo: "https://restaurant.aazify.com" },
     { emoji: "🧾", name: "Aazify FBR Digital Invoicing", tagline: "FBR-Compliant Tax Invoicing Software", desc: "Automate digital invoices, tax calculations, and FBR compliance effortlessly.", demo: "https://tax.aazify.com" },
 ];
 
 const SERVICES = [
-    { icon: "🧠", title: "Custom Software Development" },
-    { icon: "🌐", title: "Website Development" },
-    { icon: "📱", title: "Mobile App Development" },
-    { icon: "⚙️", title: "Business Automation Systems" },
-    { icon: "🤖", title: "Agentic AI Solutions" },
+    {
+        icon: "🧠",
+        title: "Custom Software Development",
+        desc: "Scalable CRM, ERP, and bespoke software solutions built with Node.js and Python to automate unique business workflows.",
+        variant: "light"
+    },
+    {
+        icon: "🌐",
+        title: "Website Development",
+        desc: "High-performance, responsive Next.js & React web apps optimized for SEO speed, premium design, and conversion.",
+        variant: "theme-green"
+    },
+    {
+        icon: "📱",
+        title: "Mobile App Development",
+        desc: "Fast, cross-platform Android and iOS mobile applications designed with Flutter and React Native for stunning UI/UX.",
+        variant: "light"
+    },
+    {
+        icon: "⚙️",
+        title: "Business Automation Systems",
+        desc: "Integrate Zapier, secure APIs, and custom bots to automate repetitive tasks, synchronize data, and optimize operations.",
+        variant: "theme-green"
+    },
+    {
+        icon: "🤖",
+        title: "Agentic AI Solutions",
+        desc: "Next-generation AI agents and LLM integrations (OpenAI/Claude) built for smart automation, analytics, and auto-support.",
+        variant: "light"
+    },
 ];
 
 const WHY_CHOOSE = [
-    { icon: "🚀", title: "Innovative & Future-Ready Solutions", desc: "We leverage the latest technologies to build solutions that stand the test of time." },
+    { icon: "🚀", title: "Innovative Solutions", desc: "We leverage the latest technologies to build solutions that stand the test of time." },
     { icon: "🎯", title: "Client-Centric Approach", desc: "Every decision is guided by your goals and outcomes, not just deliverables." },
-    { icon: "⚡", title: "Fast Delivery & Scalable Systems", desc: "Agile methodology ensures quick turnaround without compromising quality." },
-    { icon: "💼", title: "Trusted by Startups & Businesses", desc: "We've helped businesses across multiple industries grow and scale digitally." },
-    { icon: "🛠️", title: "End-to-End Development Support", desc: "From concept to deployment and beyond, we're with you every step of the way." },
+    { icon: "⚡", title: "Scalable Systems", desc: "Agile methodology ensures quick turnaround without compromising quality." },
+    { icon: "💼", title: "Trusted by Businesses", desc: "We've helped businesses across multiple industries grow and scale digitally." },
+    { icon: "🛠️", title: "Development Support", desc: "From concept to deployment and beyond, we're with you every step of the way." },
 ];
 
-const MARQUEE_ITEMS = [
-    "React", "Next.js", "Node.js", "Python", "Flutter", "PostgreSQL", "Docker", "AWS", "OpenAI", "TailwindCSS", "TypeScript", "FastAPI",
-    "React", "Next.js", "Node.js", "Python", "Flutter", "PostgreSQL", "Docker", "AWS", "OpenAI", "TailwindCSS", "TypeScript", "FastAPI",
-];
+
 
 export default function HomePage() {
     return (
@@ -36,48 +59,29 @@ export default function HomePage() {
             <section className="hero">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />
-                <div className="hero-badge">✨ Welcome to Aazify by AAZ Developers</div>
-                <h1 className="hero-title">
-                    Build Smart. <span>Scale Fast.</span> Succeed Digitally.
-                </h1>
-                <p className="hero-sub">
-                    At Aazify, we craft powerful digital solutions that help businesses
-                    grow, automate, and dominate their industries. From idea to execution
-                    — we turn your vision into reality.
-                </p>
-                <div className="hero-actions">
-                    <Link href="/contact" className="btn-primary">
-                        Let&apos;s Build Something Amazing Together 👉
-                    </Link>
-                    <Link href="/products" className="btn-secondary">
-                        Explore Products
-                    </Link>
-                </div>
-                <div className="hero-stats">
-                    {[
-                        ["50+", "Projects Delivered"],
-                        ["100+", "Happy Clients"],
-                        ["10+", "Years of Experience"],
-                    ].map(([n, l]) => (
-                        <div className="stat-item" key={String(l)}>
-                            <div className="stat-num">{n}</div>
-                            <div className="stat-label">{l}</div>
-                        </div>
-                    ))}
+
+                <div className="hero-content">
+                    <div className="hero-badge">✨ Welcome to Aazify by AAZ Developers</div>
+                    <h1 className="hero-title">
+                        Build Smart. <span>Scale Fast.</span><br />Succeed Digitally.
+                    </h1>
+                    <p className="hero-sub">
+                        At Aazify, we craft powerful digital solutions that help businesses
+                        grow, automate, and dominate their industries. From idea to execution
+                        — we turn your vision into reality.
+                    </p>
+                    <div className="hero-actions">
+                        <Link href="/contact" className="btn-primary">
+                            Let&apos;s Build Your Project 👉
+                        </Link>
+                        <Link href="/products" className="btn-secondary">
+                            Explore Products
+                        </Link>
+                    </div>
                 </div>
             </section>
 
-            {/* MARQUEE */}
-            <div className="marquee-wrap">
-                <div className="marquee">
-                    {MARQUEE_ITEMS.map((t, i) => (
-                        <div className="marquee-item" key={i}>
-                            <div className="marquee-dot" />
-                            {t}
-                        </div>
-                    ))}
-                </div>
-            </div>
+
 
             {/* PRODUCTS */}
             <section>
@@ -103,7 +107,7 @@ export default function HomePage() {
                                 <p>{p.desc}</p>
                             </div>
                             <div className="product-card-footer">
-                                <a href={p.demo} target="_blank" rel="noopener noreferrer">
+                                <a href={p.demo} target="_blank" rel="noopener noreferrer" className="btn-primary">
                                     Try Live Demo →
                                 </a>
                             </div>
@@ -126,9 +130,10 @@ export default function HomePage() {
                 </p>
                 <div className="services-grid">
                     {SERVICES.map((s) => (
-                        <div className="service-card" key={s.title}>
+                        <div className={`service-card variant-${s.variant}`} key={s.title}>
                             <div className="service-icon">{s.icon}</div>
                             <h3>{s.title}</h3>
+                            <p>{s.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -139,9 +144,7 @@ export default function HomePage() {
             {/* WHY CHOOSE */}
             <section>
                 <div className="section-tag">Why Choose Aazify</div>
-                <h2 className="section-title">
-                    Why Businesses <span>Trust Us</span>
-                </h2>
+                <h2 className="section-title">Why Businesses <span>Trust Aazify</span></h2>
                 <p className="section-sub">
                     We combine innovation, reliability, and a client-first mindset to
                     deliver exceptional results.
@@ -149,7 +152,7 @@ export default function HomePage() {
                 <div className="why-grid">
                     {WHY_CHOOSE.map((w) => (
                         <div className="why-card" key={w.title}>
-                            <div className="icon">{w.icon}</div>
+                            <div className="why-icon">{w.icon}</div>
                             <h3>{w.title}</h3>
                             <p>{w.desc}</p>
                         </div>
@@ -172,9 +175,13 @@ export default function HomePage() {
                         { icon: "📅", num: "10+", label: "Years of Experience" },
                     ].map((m) => (
                         <div className="metric-card" key={m.label}>
-                            <div className="metric-icon">{m.icon}</div>
-                            <div className="metric-num">{m.num}</div>
-                            <div className="metric-label">{m.label}</div>
+                            <div className="metric-icon-wrapper">
+                                <span className="metric-icon">{m.icon}</span>
+                            </div>
+                            <div className="metric-info">
+                                <div className="metric-num">{m.num}</div>
+                                <div className="metric-label">{m.label}</div>
+                            </div>
                         </div>
                     ))}
                 </div>

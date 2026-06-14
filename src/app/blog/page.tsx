@@ -14,7 +14,7 @@ const POSTS = [
         title: "What is Agentic AI and How Can It Transform Your Business?",
         excerpt: "Discover how autonomous AI systems can automate workflows, make decisions, and scale your business operations without human intervention.",
         date: "March 2026",
-        bg: "linear-gradient(135deg, #0a1a18, #0d2818)",
+        bg: "linear-gradient(135deg, #f0fdf4, #ccfbf1)",
     },
     {
         emoji: "🛒",
@@ -22,7 +22,7 @@ const POSTS = [
         title: "5 Reasons Your Business Needs a Modern POS System",
         excerpt: "From real-time inventory tracking to automated billing — learn why upgrading your POS can boost efficiency and revenue.",
         date: "February 2026",
-        bg: "linear-gradient(135deg, #0f1a2c, #0a2240)",
+        bg: "linear-gradient(135deg, #eff6ff, #dbeafe)",
     },
     {
         emoji: "📱",
@@ -30,7 +30,7 @@ const POSTS = [
         title: "Cross-Platform vs Native Apps: Which is Right for You?",
         excerpt: "A comprehensive guide to choosing between Flutter, React Native, and native development for your next mobile project.",
         date: "January 2026",
-        bg: "linear-gradient(135deg, #1a0a00, #1a1400)",
+        bg: "linear-gradient(135deg, #fff7ed, #ffedd5)",
     },
     {
         emoji: "🌐",
@@ -38,7 +38,7 @@ const POSTS = [
         title: "Next.js in 2026: Why It's the Best Framework for Business Websites",
         excerpt: "Explore the latest Next.js features and why it's the go-to choice for building fast, SEO-optimized business websites.",
         date: "December 2025",
-        bg: "linear-gradient(135deg, #001a2c, #0d2818)",
+        bg: "linear-gradient(135deg, #e0f2fe, #dcfce7)",
     },
     {
         emoji: "⚙️",
@@ -46,7 +46,7 @@ const POSTS = [
         title: "How to Automate Your Cold Storage Business Operations",
         excerpt: "Learn how Aazify Cold Store software can help you manage farmers, inventory, payments, and reports automatically.",
         date: "November 2025",
-        bg: "linear-gradient(135deg, #140022, #001428)",
+        bg: "linear-gradient(135deg, #fae8ff, #f3e8ff)",
     },
     {
         emoji: "🚀",
@@ -54,7 +54,7 @@ const POSTS = [
         title: "From Idea to MVP: A Step-by-Step Guide for Startups",
         excerpt: "Everything you need to know about turning your startup idea into a minimum viable product — budget, timeline, and tech stack.",
         date: "October 2025",
-        bg: "linear-gradient(135deg, #1a0533, #0a2240)",
+        bg: "linear-gradient(135deg, #f3e8ff, #e0f2fe)",
     },
 ];
 

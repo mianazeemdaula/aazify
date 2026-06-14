@@ -103,7 +103,7 @@ export default function AboutPage() {
                 <div className="why-grid">
                     {VALUES.map((v) => (
                         <div className="why-card" key={v.title}>
-                            <div className="icon">{v.icon}</div>
+                            <div className="why-icon">{v.icon}</div>
                             <h3>{v.title}</h3>
                             <p>{v.desc}</p>
                         </div>

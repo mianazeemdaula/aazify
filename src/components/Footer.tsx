@@ -33,7 +33,8 @@ const PinterestIcon = () => (
 
 export default function Footer() {
     return (
-        <footer className="main-footer">
+        <>
+            <footer className="main-footer">
             <div className="footer-grid">
                 <div className="footer-brand">
                     <Link href="/" className="nav-logo" style={{ fontSize: "1.8rem" }}>
@@ -50,7 +51,7 @@ export default function Footer() {
                     <ul>
                         <li><a href="https://coldstore.aazify.com" target="_blank" rel="noopener noreferrer">Cold Store</a></li>
                         <li><a href="https://pos.aazify.com/home" target="_blank" rel="noopener noreferrer">Point of Sale</a></li>
-                        <li><a href="https://www.aarti.aazify.com" target="_blank" rel="noopener noreferrer">Aarti / Commission Shop</a></li>
+                        <li><a href="https://mandi.aazify.com" target="_blank" rel="noopener noreferrer">Mandi Management</a></li>
                         <li><a href="https://restaurant.aazify.com" target="_blank" rel="noopener noreferrer">Restaurant Management</a></li>
                         <li><a href="https://tax.aazify.com" target="_blank" rel="noopener noreferrer">FBR Digital Invoicing</a></li>
                     </ul>
@@ -98,8 +99,10 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
+        </footer>
+        <div className="footer-bottom-wrap">
             <div className="footer-bottom">
-                <span>&copy; {new Date().getFullYear()} Aazify.com — All rights reserved.</span>
+                <span suppressHydrationWarning>&copy; {new Date().getFullYear()} Aazify.com — All rights reserved.</span>
                 <div className="footer-socials">
                     <a href="https://wa.me/923007395147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: "#25D366" }}><WhatsAppIcon /></a>
                     <a href="https://www.facebook.com/aazify" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: "#1877F2" }}><FacebookIcon /></a>
@@ -110,6 +113,7 @@ export default function Footer() {
                 </div>
                 <span>Crafted with ❤️ by AAZ Developers</span>
             </div>
-        </footer>
+        </div>
+        </>
     );
 }
