@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     title: "About Us",
     description:
         "Learn about Aazify — our story, mission, and commitment to empowering businesses through technology.",
+    alternates: {
+        canonical: "https://aazify.com/about",
+    },
 };
 
 const VALUES = [
@@ -46,8 +49,25 @@ const REVIEWS = [
 ];
 
 export default function AboutPage() {
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Aazify",
+        "description": "Learn about Aazify's mission, values, and journey in empowering businesses through custom software, mobile app development, and AI-driven automation.",
+        "url": "https://aazify.com/about",
+        "mainEntity": {
+            "@type": "ProfessionalService",
+            "name": "Aazify",
+            "url": "https://aazify.com"
+        }
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+            />
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />

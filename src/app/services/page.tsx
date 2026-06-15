@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     title: "Services",
     description:
         "Aazify offers custom software, web & mobile app development, business automation, and agentic AI solutions.",
+    alternates: {
+        canonical: "https://aazify.com/services",
+    },
 };
 
 const SERVICES = [
@@ -81,8 +84,35 @@ const SERVICES = [
 ];
 
 export default function ServicesPage() {
+    const servicesSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Aazify Services",
+        "description": "Premium custom software, website, and mobile app development, business automation, and agentic AI solutions offered by Aazify.",
+        "url": "https://aazify.com/services",
+        "numberOfItems": SERVICES.length,
+        "itemListElement": SERVICES.map((service, idx) => ({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "item": {
+                "@type": "Service",
+                "name": service.title,
+                "description": service.desc,
+                "provider": {
+                    "@type": "ProfessionalService",
+                    "name": "Aazify",
+                    "url": "https://aazify.com"
+                }
+            }
+        }))
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+            />
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />

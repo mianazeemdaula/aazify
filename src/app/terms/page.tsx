@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Terms & Conditions",
     description: "Aazify Terms & Conditions — by using our services, you agree to our terms and guidelines.",
+    alternates: {
+        canonical: "https://aazify.com/terms",
+    },
 };
 
 export default function TermsPage() {

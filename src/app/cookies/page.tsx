@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Cookies Policy",
     description: "Aazify Cookies Policy — how we use cookies to improve your browsing experience.",
+    alternates: {
+        canonical: "https://aazify.com/cookies",
+    },
 };
 
 export default function CookiesPage() {

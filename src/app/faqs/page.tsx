@@ -40,8 +40,25 @@ const FAQS = [
 export default function FaqsPage() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": FAQS.map((faq) => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+            }
+        }))
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />

@@ -4,6 +4,9 @@ export const metadata: Metadata = {
     title: "Contact Us",
     description:
         "Get in touch with Aazify — email, WhatsApp, or fill out our contact form. We reply within 24 hours.",
+    alternates: {
+        canonical: "https://aazify.com/contact",
+    },
 };
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

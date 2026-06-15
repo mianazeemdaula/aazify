@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     title: "Client Reviews",
     description:
         "Read what Aazify's clients say about our work — professional team, excellent delivery, and real results.",
+    alternates: {
+        canonical: "https://aazify.com/reviews",
+    },
 };
 
 const REVIEWS = [

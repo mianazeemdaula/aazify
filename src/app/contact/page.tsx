@@ -22,8 +22,33 @@ export default function ContactPage() {
         setForm({ name: "", email: "", phone: "", service: "", message: "" });
     };
 
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Aazify",
+        "description": "Contact AAZ Developers / Aazify for custom software development, mobile app development, business automation, and Agentic AI projects.",
+        "url": "https://aazify.com/contact",
+        "mainEntity": {
+            "@type": "ProfessionalService",
+            "name": "Aazify",
+            "url": "https://aazify.com",
+            "telephone": "+923007395147",
+            "email": "contact@aazify.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+923007395147",
+                "contactType": "customer service",
+                "email": "contact@aazify.com"
+            }
+        }
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+            />
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />

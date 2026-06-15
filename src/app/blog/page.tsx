@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     title: "Blog & Insights",
     description:
         "Read tech insights, tips, and industry knowledge from the Aazify team to help your business grow.",
+    alternates: {
+        canonical: "https://aazify.com/blog",
+    },
 };
 
 const POSTS = [
@@ -59,8 +62,34 @@ const POSTS = [
 ];
 
 export default function BlogPage() {
+    const blogSchema = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Aazify Blog & Insights",
+        "description": "Tech insights, tips, and industry knowledge from the Aazify team to help your business grow.",
+        "url": "https://aazify.com/blog",
+        "blogPost": POSTS.map((post) => ({
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.excerpt,
+            "publisher": {
+                "@type": "ProfessionalService",
+                "name": "Aazify",
+                "url": "https://aazify.com"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "Aazify"
+            }
+        }))
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+            />
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />

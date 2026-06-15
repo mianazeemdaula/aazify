@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     title: "Portfolio",
     description:
         "Explore Aazify's successful projects — business management systems, e-commerce platforms, mobile apps, and automation tools.",
+    alternates: {
+        canonical: "https://aazify.com/portfolio",
+    },
 };
 
 const CATEGORIES = [

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     title: "Our Team",
     description:
         "Meet the skilled developers, designers, and strategists behind Aazify dedicated to delivering excellence.",
+    alternates: {
+        canonical: "https://aazify.com/team",
+    },
 };
 
 const TEAM_MEMBERS = [

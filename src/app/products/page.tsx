@@ -4,6 +4,9 @@ export const metadata: Metadata = {
     title: "Products",
     description:
         "Explore Aazify's powerful, ready-to-use digital products — Cold Store, POS, Mandi Management & Restaurant Management systems.",
+    alternates: {
+        canonical: "https://aazify.com/products",
+    },
 };
 
 const PRODUCTS = [
@@ -109,8 +112,40 @@ const PRODUCTS = [
 ];
 
 export default function ProductsPage() {
+    const productsSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Aazify Products",
+        "description": "Ready-to-use digital products designed with scalability, automation, and user experience at their core.",
+        "url": "https://aazify.com/products",
+        "numberOfItems": PRODUCTS.length,
+        "itemListElement": PRODUCTS.map((product, idx) => ({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "item": {
+                "@type": "Product",
+                "name": product.name,
+                "description": product.desc,
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Aazify"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "url": product.demo,
+                    "priceCurrency": "PKR",
+                    "availability": "https://schema.org/InStock"
+                }
+            }
+        }))
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(productsSchema) }}
+            />
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />

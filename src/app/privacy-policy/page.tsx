@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "Aazify Privacy Policy — how we collect, use, and protect your data.",
+    alternates: {
+        canonical: "https://aazify.com/privacy-policy",
+    },
 };
 
 export default function PrivacyPolicyPage() {
