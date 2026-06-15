@@ -51,37 +51,32 @@ export default function AboutPage() {
             <div className="page-header">
                 <div className="hero-orb hero-orb-1" />
                 <div className="hero-orb hero-orb-2" />
-                <div className="section-tag">About Us</div>
-                <h1 className="section-title">
+                <div className="section-tag about-hero-tag">About Us</div>
+                <h1 className="section-title about-hero-title">
                     Empowering Businesses Through <span>Technology</span>
                 </h1>
-                <p className="section-sub">
-                    We don&apos;t just deliver projects — we build lasting partnerships.
+                <p className="section-sub about-hero-sub">
+                    We bridge the gap between ambitious ideas and premium digital execution. At Aazify, we design, build, and scale custom software and AI-driven solutions that accelerate your growth.
                 </p>
             </div>
 
             {/* Our Story */}
             <section>
                 <div className="about-grid">
-                    <div>
+                    <div className="about-story-content">
                         <div className="section-tag">Our Story</div>
                         <h2 className="section-title" style={{ maxWidth: "100%" }}>
-                            From Passion to <span>Impact</span>
+                            Crafting Digital Excellence: Our <span>Journey</span>
                         </h2>
-                        <p style={{ color: "var(--muted)", lineHeight: 1.8, marginBottom: "1rem", fontSize: "0.95rem" }}>
-                            Aazify was born from a passion for innovation and a vision to
-                            empower businesses with smart digital solutions. What started as
-                            a small team of dedicated developers has grown into a full-service
-                            tech company delivering software, apps, and AI solutions that make
-                            a real impact.
+                        <p style={{ color: "var(--muted)", lineHeight: 1.8, marginBottom: "1.2rem", fontSize: "0.95rem" }}>
+                            Aazify was founded with a singular purpose: to dismantle technological complexity and build high-performance products that drive real-world impact. What began as a dedicated group of visionary developers has grown into a full-scale digital engineering company. Today, we partner with businesses worldwide to deliver custom software, scalable mobile apps, and intelligent AI-driven automations.
                         </p>
                         <p style={{ color: "var(--muted)", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: "2rem" }}>
                             ✨ <strong style={{ color: "var(--text)" }}>Why We Exist:</strong>{" "}
-                            To transform ideas into scalable, reliable, and high-performing
-                            digital products that drive business success.
+                            We are here to transform ambitious concepts into robust, secure, and future-ready digital platforms that optimize workflows, scale effortlessly, and fuel sustainable business growth.
                         </p>
                     </div>
-                    <div className="about-visual">
+                    <div className="about-visual about-story-visual">
                         <div className="about-visual-inner" />
                         <div className="about-visual-text">az</div>
                     </div>

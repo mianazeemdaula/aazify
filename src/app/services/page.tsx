@@ -51,6 +51,20 @@ const SERVICES = [
         cta: "Build Your App Today",
     },
     {
+        icon: "⚙️",
+        title: "Business Automation Systems",
+        tagline: "Streamline workflows and eliminate repetitive tasks.",
+        desc: "Integrate custom bots, secure APIs, and automated triggers to connect your tools, sync data, and boost operational efficiency.",
+        highlights: [
+            "Workflow automation & API integration",
+            "Data synchronization across platforms",
+            "Custom bots & automated triggers",
+            "Zapier, Make & webhook integrations",
+        ],
+        outcome: "Eliminate human errors, reclaim valuable hours, and scale your operations smoothly.",
+        cta: "Automate Your Workflows",
+    },
+    {
         icon: "🤖",
         title: "Agentic AI Solutions",
         tagline: "Empower your business with intelligent automation.",

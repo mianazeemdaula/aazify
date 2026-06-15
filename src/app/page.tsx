@@ -66,9 +66,9 @@ export default function HomePage() {
                         Build Smart. <span>Scale Fast.</span><br />Succeed Digitally.
                     </h1>
                     <p className="hero-sub">
-                        At Aazify, we craft powerful digital solutions that help businesses
-                        grow, automate, and dominate their industries. From idea to execution
-                        — we turn your vision into reality.
+                        We build premium digital services to scale your business. From custom software
+                        and websites to mobile apps, workflow automation, and agentic AI—we turn
+                        your vision into reality.
                     </p>
                     <div className="hero-actions">
                         <Link href="/contact" className="btn-primary">
