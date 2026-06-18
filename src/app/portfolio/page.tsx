@@ -47,6 +47,20 @@ const PROJECTS = [
         emoji: "🍽️",
     },
     {
+        tag: "Business Management",
+        title: "Aazify Pesticide Management",
+        desc: "Smart pesticide and seed dealer management software with batch tracking, expiry alerts, and supplier ledgers.",
+        bg: "linear-gradient(135deg, #f0fdf4, #dcfce7)",
+        emoji: "🧪",
+    },
+    {
+        tag: "Business Management",
+        title: "Aazify Transport Management",
+        desc: "Complete fleet and logistics software to track vehicles, bookings, driver ledgers, and fuel log registers.",
+        bg: "linear-gradient(135deg, #f0fdf4, #e0f2fe)",
+        emoji: "🚛",
+    },
+    {
         tag: "E-commerce",
         title: "Custom E-commerce Platform",
         desc: "Scalable online store with dynamic pricing, inventory management, and payment integration.",

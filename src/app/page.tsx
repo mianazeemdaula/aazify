@@ -2,12 +2,15 @@ import Link from "next/link";
 
 
 const PRODUCTS = [
-    { emoji: "📦", name: "Aazify Cold Store Management", tagline: "Smart Cold Storage Management", desc: "Manage inventory, farmers, rooms, and payments all in one platform.", demo: "https://coldstore.aazify.com" },
-    { emoji: "🛒", name: "Aazify Point of Sale Management", tagline: "Modern Retail & Trading POS", desc: "Streamline sales, inventory, and customer management efficiently.", demo: "https://pos.aazify.com/home" },
-    { emoji: "💵", name: "Aazify Mandi Management", tagline: "Automated Mandi & Commission System", desc: "Track vendors, commissions, and stock in real time for Mandi and commission-based shops.", demo: "https://mandi.aazify.com" },
-    { emoji: "🍽️", name: "Aazify Restaurant Management", tagline: "End-to-End Restaurant Operations", desc: "Manage tables, orders, inventory, and staff seamlessly.", demo: "https://restaurant.aazify.com" },
-    { emoji: "🧾", name: "Aazify FBR Digital Invoicing", tagline: "FBR-Compliant Tax Invoicing Software", desc: "Automate digital invoices, tax calculations, and FBR compliance effortlessly.", demo: "https://tax.aazify.com" },
+    { emoji: "📦", name: "Cold Store Management", tagline: "Smart Cold Storage Management", desc: "Manage inventory, farmers, rooms, and payments all in one platform.", demo: "https://coldstore.aazify.com" },
+    { emoji: "🛒", name: "Point of Sale Management", tagline: "Modern Retail & Trading POS", desc: "Streamline sales, inventory, and customer management efficiently.", demo: "https://pos.aazify.com/home" },
+    { emoji: "💵", name: "Mandi Management", tagline: "Automated Mandi & Commission System", desc: "Track vendors, commissions, and stock in real time for Mandi and commission-based shops.", demo: "https://mandi.aazify.com" },
+    { emoji: "🍽️", name: "Restaurant Management", tagline: "End-to-End Restaurant Operations", desc: "Manage tables, orders, inventory, and staff seamlessly.", demo: "https://restaurant.aazify.com" },
+    { emoji: "🧪", name: "Pesticide Management", tagline: "Smart Pesticide & Seed Dealer Software", desc: "Track batches, expiry dates, supplier ledgers, and retail sales for pesticide and seed dealers.", demo: "https://pesticide.aazify.com" },
+    { emoji: "🧾", name: "FBR Digital Invoicing", tagline: "FBR-Compliant Tax Invoicing Software", desc: "Automate digital invoices, tax calculations, and FBR compliance effortlessly.", demo: "https://tax.aazify.com" },
+    { emoji: "🚛", name: "Transport Management", tagline: "Smart Fleet & Transport ERP", desc: "Manage bookings, vehicle tracking, driver accounts, fuel expenses, and route logs seamlessly.", demo: "https://trasnport.aazify.com" },
 ];
+
 
 const SERVICES = [
     {
@@ -107,7 +110,7 @@ export default function HomePage() {
                                 <p>{p.desc}</p>
                             </div>
                             <div className="product-card-footer">
-                                <a href={p.demo} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                                <a href={p.demo} target="_blank" rel="noopener noreferrer" className="product-demo-link">
                                     Try Live Demo →
                                 </a>
                             </div>

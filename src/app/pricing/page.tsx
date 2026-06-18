@@ -285,6 +285,57 @@ const PRODUCTS_PRICING: ProductPricing[] = [
         ],
     },
     {
+        id: "pesticide",
+        name: "Aazify Pesticide Management",
+        emoji: "🧪",
+        tagline: "Pesticide & Seed Dealer ERP",
+        desc: "Smart database accounting and stock management for agricultural pesticide and seed dealers with expiry alerts and batch numbers.",
+        demo: "https://pesticide.aazify.com",
+        versions: [
+            {
+                label: "All Packages",
+                id: "all",
+                plans: [
+                    {
+                        name: "Offline License",
+                        price: 35000,
+                        periodText: " / single branch",
+                        renewalPrice: 10000,
+                        desc: "Robust offline desktop system that works without internet dependency.",
+                        features: [
+                            "1 Shop/Branch Database Setup",
+                            "Seed & Pesticide Batch tracking",
+                            "Expiry Alerts & Warning System",
+                            "Complete Supplier & Customer Ledgers",
+                            "Real-Time Stock & Inventory Tracking",
+                            "1 Year Offline System Maintenance Support",
+                        ],
+                        popular: false,
+                        ctaText: "Buy Offline License",
+                        ctaLink: "/contact?product=pesticide&version=offline&plan=single-shop",
+                    },
+                    {
+                        name: "Online Subscription",
+                        price: 25000,
+                        periodText: "/ year",
+                        desc: "Cloud database system to access sales, records, and expiry alerts remotely from anywhere.",
+                        features: [
+                            "1 Cloud Outlet Setup",
+                            "Seed & Pesticide Batch tracking",
+                            "Expiry Alerts & Warning System",
+                            "Real-Time Cloud Backups & Syncing",
+                            "Remote Sales & Supplier Analytics",
+                            "Free Online Updates & Support",
+                        ],
+                        popular: true,
+                        ctaText: "Subscribe Online",
+                        ctaLink: "/contact?product=pesticide&version=online&plan=single-shop",
+                    },
+                ],
+            },
+        ],
+    },
+    {
         id: "tax",
         name: "FBR Digital Invoicing",
         emoji: "🧾",
@@ -350,6 +401,57 @@ const PRODUCTS_PRICING: ProductPricing[] = [
             },
         ],
     },
+    {
+        id: "transport",
+        name: "Aazify Transport Management",
+        emoji: "🚛",
+        tagline: "Fleet & Transport ERP",
+        desc: "Complete billing, booking management, fuel registers, driver ledgers, and maintenance logbooks for transport companies and fleet owners.",
+        demo: "https://trasnport.aazify.com",
+        versions: [
+            {
+                label: "All Packages",
+                id: "all",
+                plans: [
+                    {
+                        name: "Offline License",
+                        price: 40000,
+                        periodText: " / single branch",
+                        renewalPrice: 15000,
+                        desc: "Robust offline desktop software designed for local offices to manage logistics records.",
+                        features: [
+                            "1 Local Office Database Setup",
+                            "Vehicle & Driver Log Management",
+                            "Fuel Expense & Maintenance tracking",
+                            "Fast Consignment & Trip Billing",
+                            "Customer & Supplier Account Ledgers",
+                            "1 Year Offline Maintenance Support",
+                        ],
+                        popular: false,
+                        ctaText: "Buy Offline License",
+                        ctaLink: "/contact?product=transport&version=offline&plan=single-office",
+                    },
+                    {
+                        name: "Online Subscription",
+                        price: 30000,
+                        periodText: "/ year",
+                        desc: "Cloud version to manage your fleet bookings, driver ledgers, and trip status remotely.",
+                        features: [
+                            "1 Cloud Office Setup",
+                            "Vehicle & Driver Log Management",
+                            "Fuel Expense & Maintenance tracking",
+                            "Real-Time Cloud Backups & Syncing",
+                            "Remote Booking & Expense Analytics",
+                            "Free Online Updates & Dedicated Support",
+                        ],
+                        popular: true,
+                        ctaText: "Subscribe Online",
+                        ctaLink: "/contact?product=transport&version=online&plan=single-office",
+                    },
+                ],
+            },
+        ],
+    },
 ];
 
 export default function PricingPage() {
@@ -358,6 +460,8 @@ export default function PricingPage() {
         pos: "all",
         restaurant: "all",
         mandi: "online",
+        pesticide: "all",
+        transport: "all",
         tax: "monthly",
     });
 

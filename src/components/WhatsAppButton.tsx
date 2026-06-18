@@ -62,10 +62,22 @@ const QUICK_OPTIONS: ProductOption[] = [
         text: "Hi! I'd like to request a demo/quote for the Aazify Restaurant Management system."
     },
     {
+        emoji: "🧪",
+        name: "Pesticide Management",
+        desc: "Batch Expiry & Seed Dealer Billing",
+        text: "Hi! I am interested in Aazify Pesticide Management system. I'd like to try it."
+    },
+    {
         emoji: "🧾",
         name: "FBR Invoicing Software",
         desc: "Tax Compliance Digital Billing System",
         text: "Hi! I want compliance invoicing. Tell me more about Aazify FBR Digital Invoicing."
+    },
+    {
+        emoji: "🚛",
+        name: "Transport Management",
+        desc: "Fleet Bookings & Driver Account Ledgers",
+        text: "Hi! I am interested in Aazify Transport Management system. I'd like to get details."
     },
     {
         emoji: "💬",

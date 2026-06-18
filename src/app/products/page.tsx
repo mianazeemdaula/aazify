@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Products",
     description:
-        "Explore Aazify's powerful, ready-to-use digital products — Cold Store, POS, Mandi Management & Restaurant Management systems.",
+        "Explore Aazify's powerful, ready-to-use digital products — Cold Store, POS, Mandi, Restaurant, Pesticide, and Transport Management systems.",
     alternates: {
         canonical: "https://aazify.com/products",
     },
@@ -90,6 +90,26 @@ const PRODUCTS = [
         demo: "https://restaurant.aazify.com",
     },
     {
+        emoji: "🧪",
+        name: "Aazify Pesticide Management",
+        tagline: "Pesticide & Seed Dealer Software",
+        desc: "Specialized ERP and POS system for agricultural pesticide, fertilizer, and seed dealers.",
+        features: [
+            "Seed & Pesticide Batch Management",
+            "Expiry Date Tracking & Warning System",
+            "Complete Supplier & Customer Ledgers",
+            "Fast Retail & Wholesale Billing",
+            "Multi-Warehouse Stock Monitoring",
+            "Booker & Dealer Commission Tracking",
+            "Government Licensing Reports",
+            "Expense & Cashbook Management",
+            "FBR Tax Integration",
+        ],
+        summary:
+            "A comprehensive solution designed for pesticide and seed merchants to track batches, manage expiry dates, and simplify ledger accounting.",
+        demo: "https://pesticide.aazify.com",
+    },
+    {
         emoji: "🧾",
         name: "Aazify FBR Digital Invoicing",
         tagline: "Tax & FBR Compliance",
@@ -108,6 +128,26 @@ const PRODUCTS = [
         summary:
             "A powerful FBR-integrated invoicing solution to keep your business tax-compliant and invoice management effortless.",
         demo: "https://tax.aazify.com",
+    },
+    {
+        emoji: "🚛",
+        name: "Aazify Transport Management",
+        tagline: "Fleet & Transport ERP",
+        desc: "Complete fleet and logistics software to track vehicles, bookings, drivers, fuel consumption, and maintenance logs.",
+        features: [
+            "Vehicle & Fleet Log Management",
+            "Booking & Dispatch Operations",
+            "Driver & Staff Accounts Tracking",
+            "Fuel Expense & Consumption Logs",
+            "Real-Time Route & Trip Records",
+            "Maintenance & Service Schedules",
+            "Consignment & Customer Ledgers",
+            "Interactive Performance Reports",
+            "Live Analytics & Profitability Metrics",
+        ],
+        summary:
+            "A comprehensive solution to automate transportation logistics, optimize driver assignments, track maintenance, and control fleet operating costs.",
+        demo: "https://trasnport.aazify.com",
     },
 ];
 

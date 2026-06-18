@@ -53,7 +53,9 @@ export default function Footer() {
                         <li><a href="https://pos.aazify.com/home" target="_blank" rel="noopener noreferrer">Point of Sale</a></li>
                         <li><a href="https://mandi.aazify.com" target="_blank" rel="noopener noreferrer">Mandi Management</a></li>
                         <li><a href="https://restaurant.aazify.com" target="_blank" rel="noopener noreferrer">Restaurant Management</a></li>
+                        <li><a href="https://pesticide.aazify.com" target="_blank" rel="noopener noreferrer">Pesticide Management</a></li>
                         <li><a href="https://tax.aazify.com" target="_blank" rel="noopener noreferrer">FBR Digital Invoicing</a></li>
+                        <li><a href="https://trasnport.aazify.com" target="_blank" rel="noopener noreferrer">Transport Management</a></li>
                     </ul>
                 </div>
                 <div>

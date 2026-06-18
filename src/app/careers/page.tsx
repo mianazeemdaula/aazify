@@ -97,8 +97,8 @@ export default function CareersPage() {
                     Join a Team That&apos;s <span>Growing Fast</span>
                 </h2>
                 <p className="section-sub">
-                    Work on live products like Cold Store, POS, Mandi Management, and
-                    Restaurant Management.
+                    Work on live products like Cold Store, POS, Mandi, Restaurant, Pesticide, and
+                    Transport Management.
                 </p>
                 <div className="timeline">
                     {TIMELINE.map((t) => (

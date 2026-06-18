@@ -7,7 +7,9 @@ const PRODUCTS = [
     { emoji: "🛒", name: "Retail & Trading POS System" },
     { emoji: "💵", name: "Mandi & Commission System" },
     { emoji: "🍽️", name: "Restaurant Management System" },
-    { emoji: "🧾", name: "FBR Digital Invoicing System" }
+    { emoji: "🧪", name: "Pesticide & Seed Dealer System" },
+    { emoji: "🧾", name: "FBR Digital Invoicing System" },
+    { emoji: "🚛", name: "Transport & Fleet ERP System" }
 ];
 
 export default function HeroVisual() {
