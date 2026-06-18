@@ -316,8 +316,9 @@ const PRODUCTS_PRICING: ProductPricing[] = [
                     },
                     {
                         name: "Online Subscription",
-                        price: 25000,
+                        price: 35000,
                         periodText: "/ year",
+                        renewalPrice: 10000,
                         desc: "Cloud database system to access sales, records, and expiry alerts remotely from anywhere.",
                         features: [
                             "1 Cloud Outlet Setup",
@@ -414,26 +415,8 @@ const PRODUCTS_PRICING: ProductPricing[] = [
                 id: "all",
                 plans: [
                     {
-                        name: "Offline License",
-                        price: 40000,
-                        periodText: " / single branch",
-                        renewalPrice: 15000,
-                        desc: "Robust offline desktop software designed for local offices to manage logistics records.",
-                        features: [
-                            "1 Local Office Database Setup",
-                            "Vehicle & Driver Log Management",
-                            "Fuel Expense & Maintenance tracking",
-                            "Fast Consignment & Trip Billing",
-                            "Customer & Supplier Account Ledgers",
-                            "1 Year Offline Maintenance Support",
-                        ],
-                        popular: false,
-                        ctaText: "Buy Offline License",
-                        ctaLink: "/contact?product=transport&version=offline&plan=single-office",
-                    },
-                    {
                         name: "Online Subscription",
-                        price: 30000,
+                        price: 12000,
                         periodText: "/ year",
                         desc: "Cloud version to manage your fleet bookings, driver ledgers, and trip status remotely.",
                         features: [
