@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { POSTS } from "./blog/postsData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://aazify.com";
@@ -21,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
   ];
 
-  return routes.map((route) => {
+  const staticSitemap = routes.map((route) => {
     // Determine the priority and change frequency based on the importance of the route
     let priority = 0.5;
     let changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" = "monthly";
@@ -47,4 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     };
   });
+
+  const dynamicBlogSitemap = POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticSitemap, ...dynamicBlogSitemap];
 }

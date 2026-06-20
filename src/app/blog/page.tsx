@@ -1,65 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { POSTS } from "./postsData";
 
 export const metadata: Metadata = {
     title: "Blog & Insights",
     description:
-        "Read tech insights, tips, and industry knowledge from the Aazify team to help your business grow.",
+        "Read tech insights, tips, and industry knowledge from the Aazify team to help your business grow and automate.",
     alternates: {
         canonical: "https://aazify.com/blog",
     },
 };
-
-const POSTS = [
-    {
-        emoji: "🧠",
-        tag: "AI & Automation",
-        title: "What is Agentic AI and How Can It Transform Your Business?",
-        excerpt: "Discover how autonomous AI systems can automate workflows, make decisions, and scale your business operations without human intervention.",
-        date: "March 2026",
-        bg: "linear-gradient(135deg, #f0fdf4, #ccfbf1)",
-    },
-    {
-        emoji: "🛒",
-        tag: "Business Solutions",
-        title: "5 Reasons Your Business Needs a Modern POS System",
-        excerpt: "From real-time inventory tracking to automated billing — learn why upgrading your POS can boost efficiency and revenue.",
-        date: "February 2026",
-        bg: "linear-gradient(135deg, #eff6ff, #dbeafe)",
-    },
-    {
-        emoji: "📱",
-        tag: "Mobile Development",
-        title: "Cross-Platform vs Native Apps: Which is Right for You?",
-        excerpt: "A comprehensive guide to choosing between Flutter, React Native, and native development for your next mobile project.",
-        date: "January 2026",
-        bg: "linear-gradient(135deg, #fff7ed, #ffedd5)",
-    },
-    {
-        emoji: "🌐",
-        tag: "Web Development",
-        title: "Next.js in 2026: Why It's the Best Framework for Business Websites",
-        excerpt: "Explore the latest Next.js features and why it's the go-to choice for building fast, SEO-optimized business websites.",
-        date: "December 2025",
-        bg: "linear-gradient(135deg, #e0f2fe, #dcfce7)",
-    },
-    {
-        emoji: "⚙️",
-        tag: "Business Automation",
-        title: "How to Automate Your Cold Storage Business Operations",
-        excerpt: "Learn how Aazify Cold Store software can help you manage farmers, inventory, payments, and reports automatically.",
-        date: "November 2025",
-        bg: "linear-gradient(135deg, #fae8ff, #f3e8ff)",
-    },
-    {
-        emoji: "🚀",
-        tag: "Startup Tips",
-        title: "From Idea to MVP: A Step-by-Step Guide for Startups",
-        excerpt: "Everything you need to know about turning your startup idea into a minimum viable product — budget, timeline, and tech stack.",
-        date: "October 2025",
-        bg: "linear-gradient(135deg, #f3e8ff, #e0f2fe)",
-    },
-];
 
 export default function BlogPage() {
     const blogSchema = {
@@ -72,6 +22,7 @@ export default function BlogPage() {
             "@type": "BlogPosting",
             "headline": post.title,
             "description": post.excerpt,
+            "url": `https://aazify.com/blog/${post.slug}`,
             "publisher": {
                 "@type": "ProfessionalService",
                 "name": "Aazify",
@@ -106,17 +57,23 @@ export default function BlogPage() {
             <section style={{ paddingTop: 0 }}>
                 <div className="blog-grid">
                     {POSTS.map((post) => (
-                        <div className="blog-card" key={post.title}>
+                        <Link
+                            href={`/blog/${post.slug}`}
+                            className="blog-card"
+                            key={post.title}
+                            style={{ textDecoration: "none", color: "inherit", display: "flex", flexDirection: "column" }}
+                            id={`blog-card-${post.slug}`}
+                        >
                             <div className="blog-card-img" style={{ background: post.bg }}>
                                 <span style={{ fontSize: "3.5rem" }}>{post.emoji}</span>
                             </div>
-                            <div className="blog-card-body">
+                            <div className="blog-card-body" style={{ display: "flex", flexDirection: "column", flex: 1 }}>
                                 <div className="blog-card-tag">{post.tag}</div>
                                 <h3>{post.title}</h3>
-                                <p>{post.excerpt}</p>
+                                <p style={{ flex: 1 }}>{post.excerpt}</p>
                                 <div className="blog-card-meta">{post.date}</div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </section>

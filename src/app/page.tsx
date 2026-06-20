@@ -35,7 +35,7 @@ const SERVICES = [
         icon: "⚙️",
         title: "Business Automation Systems",
         desc: "Integrate Zapier, secure APIs, and custom bots to automate repetitive tasks, synchronize data, and optimize operations.",
-        variant: "theme-green"
+        variant: "theme-yellow"
     },
     {
         icon: "🤖",
@@ -90,7 +90,7 @@ export default function HomePage() {
             <section>
                 <div className="section-tag">Our Main Products</div>
                 <h2 className="section-title">
-                    Powerful Products Built to <span>Solve Real Problems</span>
+                    Aazify Software Products <span>Solve Real Problems</span>
                 </h2>
                 <p className="section-sub">
                     Ready-to-use digital products designed with scalability, automation,
@@ -125,7 +125,7 @@ export default function HomePage() {
             <section>
                 <div className="section-tag">What We Do</div>
                 <h2 className="section-title">
-                    Modern, Scalable & <span>Result-Driven</span> Solutions
+                    Services By <span>Aazify</span>
                 </h2>
                 <p className="section-sub">
                     We specialize in delivering digital solutions that transform how
@@ -134,9 +134,15 @@ export default function HomePage() {
                 <div className="services-grid">
                     {SERVICES.map((s) => (
                         <div className={`service-card variant-${s.variant}`} key={s.title}>
-                            <div className="service-icon">{s.icon}</div>
-                            <h3>{s.title}</h3>
-                            <p>{s.desc}</p>
+                            <div className="service-card-header">
+                                <div className="service-icon">{s.icon}</div>
+                                <div>
+                                    <h3>{s.title}</h3>
+                                </div>
+                            </div>
+                            <div className="service-card-body">
+                                <p>{s.desc}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -153,13 +159,23 @@ export default function HomePage() {
                     deliver exceptional results.
                 </p>
                 <div className="why-grid">
-                    {WHY_CHOOSE.map((w) => (
-                        <div className="why-card" key={w.title}>
-                            <div className="why-icon">{w.icon}</div>
-                            <h3>{w.title}</h3>
-                            <p>{w.desc}</p>
-                        </div>
-                    ))}
+                    {WHY_CHOOSE.map((w, idx) => {
+                        const cardVariants = ["light", "theme-green", "light", "theme-yellow", "light"];
+                        const variant = cardVariants[idx % cardVariants.length];
+                        return (
+                            <div className={`why-card variant-${variant}`} key={w.title}>
+                                <div className="why-card-header">
+                                    <div className="why-icon">{w.icon}</div>
+                                    <div>
+                                        <h3>{w.title}</h3>
+                                    </div>
+                                </div>
+                                <div className="why-card-body">
+                                    <p>{w.desc}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
 
@@ -173,8 +189,8 @@ export default function HomePage() {
                 </h2>
                 <div className="metrics-grid" style={{ marginTop: "2rem" }}>
                     {[
-                        { icon: "✅", num: "50+", label: "Projects Delivered" },
-                        { icon: "😊", num: "100+", label: "Happy Clients" },
+                        { icon: "✅", num: "100+", label: "Projects Delivered" },
+                        { icon: "😊", num: "1000+", label: "Happy Clients" },
                         { icon: "📅", num: "10+", label: "Years of Experience" },
                     ].map((m) => (
                         <div className="metric-card" key={m.label}>

@@ -161,8 +161,10 @@ const PRODUCTS_PRICING: ProductPricing[] = [
                     },
                     {
                         name: "Online Subscription",
-                        price: 25000,
-                        periodText: "/ year",
+                        price: 35000,
+
+                        periodText: " / single branch",
+                        renewalPrice: 10000,
                         desc: "Cloud POS to manage and access your store details anywhere on any device.",
                         features: [
                             "1 Cloud Outlet Setup",
@@ -194,7 +196,7 @@ const PRODUCTS_PRICING: ProductPricing[] = [
                 plans: [
                     {
                         name: "Offline License",
-                        price: 25000,
+                        price: 35000,
                         periodText: " / single branch",
                         renewalPrice: 10000,
                         desc: "Offline POS software designed for local restaurant counters and kitchen printing.",

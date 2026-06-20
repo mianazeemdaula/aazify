@@ -116,13 +116,23 @@ export default function AboutPage() {
                     that help businesses thrive.
                 </p>
                 <div className="why-grid">
-                    {VALUES.map((v) => (
-                        <div className="why-card" key={v.title}>
-                            <div className="why-icon">{v.icon}</div>
-                            <h3>{v.title}</h3>
-                            <p>{v.desc}</p>
-                        </div>
-                    ))}
+                    {VALUES.map((v, idx) => {
+                        const cardVariants = ["light", "theme-green", "light", "theme-yellow", "light"];
+                        const variant = cardVariants[idx % cardVariants.length];
+                        return (
+                            <div className={`why-card variant-${variant}`} key={v.title}>
+                                <div className="why-card-header">
+                                    <div className="why-icon">{v.icon}</div>
+                                    <div>
+                                        <h3>{v.title}</h3>
+                                    </div>
+                                </div>
+                                <div className="why-card-body">
+                                    <p>{v.desc}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
 

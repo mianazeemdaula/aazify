@@ -12,19 +12,15 @@ export const metadata: Metadata = {
 const PRODUCTS = [
     {
         emoji: "📦",
-        name: "Aazify Cold Store",
+        name: "Cold Store",
         tagline: "Cold Storage Management",
         desc: "Smart software to manage your cold storage operations with ease and accuracy.",
         features: [
-            "Complete Farmers Record Management",
-            "Advanced Rooms & Racks Management",
-            "Multi-Store & Room Configuration",
-            "Smart Contract Handling",
-            "Real-time Capacity & Stock Monitoring",
-            "Automated Expense & Payment Tracking",
-            "Live Revenue & Business Trends",
-            "Employee Management & Payroll System",
-            "FBR Tax Integration",
+            "Farmers & Landlord Records",
+            "Rooms, Racks & Capacity Tracking",
+            "Contract & Rent Management",
+            "Billing, Expenses & Payments",
+            "FBR Tax & Reports Integration",
         ],
         summary:
             "A complete solution to manage your cold storage operations efficiently and make data-driven decisions.",
@@ -32,19 +28,15 @@ const PRODUCTS = [
     },
     {
         emoji: "🛒",
-        name: "Aazify Point of Sale (POS)",
+        name: "Point of Sale (POS)",
         tagline: "Retail & Trading POS",
         desc: "Modern POS system for retailers and traders to streamline sales and inventory.",
         features: [
-            "Complete Sales & Purchase Management",
-            "Barcode & QR Code Integration",
-            "Multi-Outlet Configuration",
-            "Vendor & Customer Record Management",
-            "Real-Time Stock & Inventory Tracking",
-            "Automated Billing & Payment Handling",
-            "Live Sales & Revenue Analytics",
-            "Employee Management & Access Control",
-            "FBR Tax & Compliance Integration",
+            "Sales & Purchase Tracking",
+            "Barcode & QR Scanner Support",
+            "Real-Time Inventory Control",
+            "Customer & Vendor Ledgers",
+            "FBR Tax Integration & Billing",
         ],
         summary:
             "A comprehensive solution to streamline retail operations and maximize efficiency.",
@@ -52,18 +44,14 @@ const PRODUCTS = [
     },
     {
         emoji: "💵",
-        name: "Aazify Mandi Management",
+        name: "Mandi Management",
         tagline: "Mandi & Commission Shop",
         desc: "Complete solution for Mandi and commission-based shops to manage products, sales, and commissions.",
         features: [
-            "Product & Inventory Management",
-            "Commission Calculation for Vendors",
-            "Multi-Shop & Vendor Setup",
-            "Customer & Vendor Record Handling",
-            "Real-Time Stock Monitoring",
-            "Automated Expense & Payment Tracking",
-            "Live Revenue & Profit Trends",
-            "Employee Management & Payroll System",
+            "Vendor & Customer Ledgers",
+            "Automatic Commission Calculation",
+            "Stock & Inventory Tracking",
+            "Expense & Daily Cashbook",
             "FBR Tax Integration",
         ],
         summary:
@@ -72,18 +60,15 @@ const PRODUCTS = [
     },
     {
         emoji: "🍽️",
-        name: "Aazify Restaurant Management",
+        name: "Restaurant Management",
         tagline: "Restaurant Operations",
         desc: "End-to-end software for restaurants to handle orders, tables, and kitchen workflows efficiently.",
         features: [
             "Table & Order Management",
-            "Menu & Recipe Configuration",
-            "Multi-Branch & Kitchen Setup",
+            "Menu & Kitchen Workflows",
             "Inventory & Stock Monitoring",
-            "Billing & Payment Automation",
-            "Live Revenue & Performance Reports",
-            "Staff Management & Payroll System",
-            "FBR Tax Integration",
+            "Automated Billing & Payments",
+            "FBR Tax & Sales Reports",
         ],
         summary:
             "A full-featured solution to streamline restaurant operations and enhance customer satisfaction.",
@@ -91,19 +76,15 @@ const PRODUCTS = [
     },
     {
         emoji: "🧪",
-        name: "Aazify Pesticide Management",
+        name: "Pesticide Management",
         tagline: "Pesticide & Seed Dealer Software",
         desc: "Specialized ERP and POS system for agricultural pesticide, fertilizer, and seed dealers.",
         features: [
-            "Seed & Pesticide Batch Management",
-            "Expiry Date Tracking & Warning System",
-            "Complete Supplier & Customer Ledgers",
-            "Fast Retail & Wholesale Billing",
-            "Multi-Warehouse Stock Monitoring",
-            "Booker & Dealer Commission Tracking",
-            "Government Licensing Reports",
-            "Expense & Cashbook Management",
-            "FBR Tax Integration",
+            "Batch & Expiry Date Tracking",
+            "Supplier & Customer Ledgers",
+            "Retail & Wholesale Billing",
+            "Multi-Warehouse Inventory",
+            "FBR Tax & Licensing Reports",
         ],
         summary:
             "A comprehensive solution designed for pesticide and seed merchants to track batches, manage expiry dates, and simplify ledger accounting.",
@@ -111,19 +92,15 @@ const PRODUCTS = [
     },
     {
         emoji: "🧾",
-        name: "Aazify FBR Digital Invoicing",
+        name: "FBR Digital Invoicing",
         tagline: "Tax & FBR Compliance",
         desc: "FBR-compliant digital invoicing software to automate tax invoices and simplify business compliance.",
         features: [
-            "FBR Compliant Digital Invoicing",
-            "Automated Invoice Generation",
+            "FBR Compliant Invoicing",
             "Real-time Sales Tax Calculation",
-            "GST & Income Tax Management",
-            "IRIS & POS System Integration",
-            "Invoice History & Record Keeping",
+            "GST & IRIS System Integration",
             "Multi-Business & Branch Support",
-            "PDF & Print Invoice Export",
-            "Automated Tax Reporting & Summaries",
+            "PDF, Print & Tax Summaries",
         ],
         summary:
             "A powerful FBR-integrated invoicing solution to keep your business tax-compliant and invoice management effortless.",
@@ -131,19 +108,15 @@ const PRODUCTS = [
     },
     {
         emoji: "🚛",
-        name: "Aazify Transport Management",
+        name: "Transport Management",
         tagline: "Fleet & Transport ERP",
         desc: "Complete fleet and logistics software to track vehicles, bookings, drivers, fuel consumption, and maintenance logs.",
         features: [
             "Vehicle & Fleet Log Management",
             "Booking & Dispatch Operations",
-            "Driver & Staff Accounts Tracking",
-            "Fuel Expense & Consumption Logs",
-            "Real-Time Route & Trip Records",
-            "Maintenance & Service Schedules",
-            "Consignment & Customer Ledgers",
-            "Interactive Performance Reports",
-            "Live Analytics & Profitability Metrics",
+            "Driver & Staff Commission Tracking",
+            "Fuel & Trip Expense Logs",
+            "Route & Maintenance Scheduling",
         ],
         summary:
             "A comprehensive solution to automate transportation logistics, optimize driver assignments, track maintenance, and control fleet operating costs.",
@@ -191,7 +164,7 @@ export default function ProductsPage() {
                 <div className="hero-orb hero-orb-2" />
                 <div className="section-tag">Our Products</div>
                 <h1 className="section-title">
-                    Powerful Products Built to <span>Solve Real Problems</span>
+                    Aazify Software Products <span>Solve Real Problems</span>
                 </h1>
                 <p className="section-sub">
                     At Aazify, we don&apos;t just provide services — we build powerful,
@@ -227,8 +200,8 @@ export default function ProductsPage() {
                                     <h4 className="product-card-features-heading">Key Features</h4>
                                     <div className="product-card-features-list">
                                         {product.features.map((f, fIdx) => (
-                                            <div 
-                                                className="product-card-feature-pill" 
+                                            <div
+                                                className="product-card-feature-pill"
                                                 key={f}
                                                 id={`feature-${productKey}-${fIdx}`}
                                             >

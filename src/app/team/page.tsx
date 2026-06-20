@@ -81,9 +81,15 @@ export default function TeamPage() {
                 <div className="services-grid">
                     {DEPARTMENTS.map((d) => (
                         <div className="service-card" key={d.title}>
-                            <div className="service-icon">{d.icon}</div>
-                            <h3>{d.title}</h3>
-                            <p>{d.desc}</p>
+                            <div className="service-card-header">
+                                <div className="service-icon">{d.icon}</div>
+                                <div>
+                                    <h3>{d.title}</h3>
+                                </div>
+                            </div>
+                            <div className="service-card-body">
+                                <p>{d.desc}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
